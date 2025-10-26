@@ -1,0 +1,49 @@
+# RBAC Configuration DATA-MINER
+# Contrôle d'accès granulaire inspiré EMAIL-SENDER-1 governance
+
+roles:
+  ecosystem_admin:
+    permissions:
+      - "*"
+    description: "Contrôle total écosystème GERIVDB"
+    
+  msr_analyst:
+    permissions:
+      - "read:mining_results"
+      - "execute:analysis"  
+      - "view:dashboards"
+      - "export:reports"
+    description: "Analyse données MSR"
+    
+  governance_engineer:
+    permissions:
+      - "write:playbooks"
+      - "update:templates"
+      - "configure:ci_gates"
+      - "manage:antipatterns"
+    description: "Ingénierie governance"
+    
+  quality_reviewer:
+    permissions:
+      - "validate:antipatterns"
+      - "approve:remedies" 
+      - "audit:compliance"
+      - "review:playbooks"
+    description: "Validation qualité"
+
+policies:
+  branch_protection:
+    - "no_direct_main"
+    - "no_direct_dev"
+    - "pr_required"
+    - "tests_required"
+    
+  antipattern_blocking:
+    - "no_lovable_naming"
+    - "no_monolithic_commits"
+    - "memory_leak_prevention"
+    
+  playbook_compliance:
+    - "template_adherence"
+    - "documentation_completeness" 
+    - "ci_gate_validation"

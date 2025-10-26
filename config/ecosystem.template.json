@@ -1,0 +1,38 @@
+{
+  "ecosystem": {
+    "name": "ECOSYSTEM-1",
+    "description": "Périmètre défini dépôts critiques/satellites/transversaux",
+    "repositories": [
+      "DevTools",
+      "ECOYSTEM", 
+      "vsix-ai-orchestrator",
+      "FLUENCE",
+      "EMAIL-SENDER-1",
+      "GERIBOOKING",
+      "CANDIDATOR",
+      "PITCH-1",
+      "racines",
+      "BRAIN"
+    ],
+    "hub_repository": "DevTools",
+    "orchestrator_repository": "ECOYSTEM"
+  },
+  "github": {
+    "token": "YOUR_GITHUB_TOKEN",
+    "api_base": "https://api.github.com",
+    "rate_limit": 5000,
+    "owner": "gerivdb"
+  },
+  "mining": {
+    "analysis_depth": "COMPREHENSIVE",
+    "commit_lookback_days": 180,
+    "hotspot_threshold": 10,
+    "coupling_threshold": 0.7
+  },
+  "governance": {
+    "rbac_enabled": true,
+    "ci_gatekeeper": true,
+    "antipattern_blocking": true,
+    "playbook_enforcement": true
+  }
+}

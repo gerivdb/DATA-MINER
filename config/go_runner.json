@@ -1,0 +1,27 @@
+{
+  "runner_id": "data-miner-local-01",
+  "workspace_path": "./workspace",
+  "log_path": "./logs/runner",
+  "schedule": "0 */2 * * *",
+  "github_token": "${GITHUB_TOKEN}",
+  "ecosystem_repos": [
+    "DevTools",
+    "ECOYSTEM",
+    "vsix-ai-orchestrator", 
+    "FLUENCE",
+    "EMAIL-SENDER-1",
+    "GERIBOOKING",
+    "CANDIDATOR",
+    "PITCH-1",
+    "racines",
+    "BRAIN"
+  ],
+  "parallel_jobs": 4,
+  "runner_config": {
+    "alternative_to_github_actions": true,
+    "local_execution": true,
+    "cost_free": true,
+    "devtools_integration": true,
+    "reason": "Éviter tokens payants GitHub Actions, utiliser PC local"
+  }
+}
